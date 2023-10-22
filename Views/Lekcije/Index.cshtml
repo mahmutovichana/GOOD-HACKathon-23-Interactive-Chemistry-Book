@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "Lekcije";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <style>
+        body {
+            background-image: url("/images/chemBackground.jpg");
+           
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .lessons-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            padding-top:10%;
+            padding-left: 10%;
+        }
+
+        .lesson-box {
+            width: 200px;
+            height: 200px;
+            background-color: #152238;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .lesson-box:hover {
+                background-color: #06151F;
+            }
+
+        .lesson-title {
+            margin: 10px 0;
+        }
+
+        .lesson-box img {
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Odaberite lekciju:</h1>
+    </div>
+    <div class="lessons-container">
+        <!-- Lesson 1: Kisik -->
+        <div class="lesson-box" onclick="redirectToLesson('kisik')">
+            <img src="https://cff2.earth.com/uploads/2021/03/31164230/D2EDA005-34E7-427C-981E-667DDEE1CA9C-960x640.jpeg" alt="Kisik Slika">
+            <p class="lesson-title">Kisik</p>
+        </div>
+
+        <!-- Lesson 2: Vodik -->
+        <div class="lesson-box" onclick="redirectToLesson('vodik')">
+            <img src="https://lidermedia.hr/images/slike/2020/12/04/o_387643_1024.jpg" alt="Vodik Slika">
+            <p class="lesson-title">Vodik</p>
+        </div>
+
+        <!-- Lesson 3: Sumpor -->
+        <div class="lesson-box" onclick="redirectToLesson('sumpor')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg/800px-Sulfur_-_El_Desierto_mine%2C_San_Pablo_de_Napa%2C_Daniel_Campos_Province%2C_Potos%C3%AD%2C_Bolivia.jpg" alt="Sumpor Slika">
+            <p class="lesson-title">Sumpor</p>
+        </div>
+
+        <!-- Lesson 4: Soli -->
+        <div class="lesson-box" onclick="redirectToLesson('soli')">
+            <img src="https://edutorij-admin-api.carnet.hr/storage/extracted/7b5e1fe5-86e2-4142-af6c-5197c4a08148/content/uploads/kemija-8/m01/j03/GettyImages-126552315-1.jpg" alt="Soli Slika">
+            <p class="lesson-title">Soli</p>
+        </div>
+
+        <!-- Lesson 5: Baze -->
+        <div class="lesson-box" onclick="redirectToLesson('baze')">
+            <img src="https://edutorij-admin-api.carnet.hr/storage/extracted/703916/content/uploads/kemija-2/m04/j02/C0372532-Strong_alkalis_in_laboratory_bottles-2.jpg" alt="Baze Slika">
+            <p class "lesson-title">Baze</p>
+        </div>
+
+        <!-- Lesson 6: Kiseline -->
+        <div class="lesson-box" onclick="redirectToLesson('kiseline')">
+            <img src="https://th.bing.com/th/id/R.85476135cf00c88d8d9b8d873be4856f?rik=h0drWfNM47xZcA&riu=http%3a%2f%2fwww.chemistryexplained.com%2fphotos%2facid-base-chemistry-3284.jpg&ehk=ciWc6aFikNz8s%2fCezXK3WStXhDxs4FSYvLsga6Sb9wE%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Kiseline Slika">
+            <p class="lesson-title">Kiseline</p>
+        </div>
+    </div>
+
+    <script>
+        function redirectToLesson(lesson) {
+            if (lesson === 'kisik') {
+                window.location.href = '/Kisik/Index';
+            } else if (lesson === 'vodik') {
+                window.location.href = '/Vodik/Index';
+            } else if (lesson === 'sumpor') {
+                window.location.href = '/Sumpor/Index';
+            } else if (lesson === 'soli') {
+                window.location.href = '/Soli/Index';  
+            } else if (lesson === 'baze') {
+                window.location.href = '/Baze/Index'; 
+            } else if (lesson === 'kiseline') {
+                window.location.href = '/Kiseline/Index';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Kisik</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for the carousel */
+        .carousel {
+            width: 90%; /* Increase carousel width */
+            height: 70vh; /* Increase carousel height */
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        .carousel-inner {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .carousel-item p {
+            font-size: 20px;
+            color: #333;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #008CBA; /* Blue color for icons */
+            background-size: 40px 40px; /* Increase icon size */
+            fill: white; /* Icon character color */
+        }
+
+        .carousel-indicators .active {
+            background-color: #008CBA; /* Blue color for active slide */
+        }
+
+        .carousel-indicators li {
+            background-color: #aaa; /* Page color */
+        }
+
+        .container {
+            max-width: 100%; /* Allow the container to be full-width */
+            margin: 0; /* Remove margin to make it full-width */
+            padding: 0; /* Remove padding to make it full-width */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <p>Kisik ima fascinantnu hemijsku važnost...</p>
+            </div>
+            <div class="carousel-item">
+                <p>Kisik su neovisno jedan o drugome otkrili švedski ljekarnik Scheele i Joseph Priestley krajem 18. stoljeća...</p>
+            </div>
+            <div class="carousel-item">
+                <p>Kisik se u elementarnom stanju nalazi u obliku dvoatomnih molekula...</p>
+            </div>
+            <div class ="carousel-item">
+                <p>Prije tri do četiri milijarde godina u Zemljinoj atmosferi gotovo da i nije bilo kisika...</p>
+            </div>
+            <div class="carousel-item">
+                <p>Kisik izgrađuje stijene na Mjesecu, gdje mu je maseni udio 43 %...</p>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="font-size: 40px;"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="font-size: 40px;"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
+            var currentIndex = $('div.active').index();
+            if (currentIndex == 0) {
+                $('.carousel-control-prev').hide();
+                $('.carousel-control-next').show();
+            } else if (currentIndex == 5) {
+                $('.carousel-control-prev').show();
+                $('.carousel-control-next').hide();
+            } else {
+                $('.carousel-control-prev').show();
+                $('.carousel-control-next').show();
+            }
+        });
+    </script>
+</body>
+</html>

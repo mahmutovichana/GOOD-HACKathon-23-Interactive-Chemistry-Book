@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif; /* Koristi Montserrat font */
+            background-image: url('/images/chemBackground.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .model-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Transparentna pozadina */
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 10px; /* Dodat razmak između modela */
+            display: flex;
+            flex-direction: row; /* Rasporedi horizontalno */
+        }
+
+        .model-info {
+            flex: 1; /* Rastegnuti model-info da zauzme preostali prostor */
+            text-align: left;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px; /* Smanjenje veličine fonta */
+            color: #0076BE; /* Promenjen boja naslova */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0; /* Dodat razmak iznad i ispod tabele */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #48bf91;
+            color: white;
+        }
+
+        td {
+            background-color: #0076BE;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="model-container">
+        <div>
+            <script type="text/javascript" src="https://chemapps.stolaf.edu/jmol/jmol.php?model=glucose&inline"></script>
+        </div>
+
+        <div class="model-info">
+            <h2>Glukoza (C6H1206)</h2>
+            <table>
+                <tr>
+                    <th>Svojstva</th>
+                    <th>Vrijednost</th>
+                </tr>
+                <tr>
+                    <td>Molarna masa</td>
+                    <td>180.156 g/mol</td>
+                </tr>
+                <tr>
+                    <td>Gustina</td>
+                    <td>1.54 g/cm³</td>
+                </tr>
+                <tr>
+                    <td>Tačka ključanja</td>
+                    <td>232.96 °C</td>
+                </tr>
+                <tr>
+                    <td>Tačka topljenja</td>
+                    <td>146 °C</td>
+                </tr>
+            </table>
+            <a href="https://hr.wikipedia.org/wiki/Glukoza">Saznaj više</a>
+        </div>
+    </div>
+
+    <div class="model-container">
+        <div>
+            <img src="/images/sumpor.png" />
+        </div>
+        <div class="model-info">
+            <h2>Sumpor (S)</h2>
+            <table>
+                <tr>
+                    <th>Svojstva</th>
+                    <th>Vrijednost</th>
+                </tr>
+                <tr>
+                    <td>Molarna masa</td>
+                    <td>32.06 g/mol</td>
+                </tr>
+                <tr>
+                    <td>Gustina</td>
+                    <td>2.07 g/cm³</td>
+                </tr>
+                <tr>
+                    <td>Tačka ključanja</td>
+                    <td>444.67 °C</td>
+                </tr>
+                <tr>
+                    <td>Tačka topljenja</td>
+                    <td>115.21 °C</td>
+                </tr>
+            </table>
+            <a href="https://hr.wikipedia.org/wiki/Sumpor">Saznaj više</a>
+        </div>
+    </div>
+</body>
+</html>
